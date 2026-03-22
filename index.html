@@ -174,12 +174,18 @@
             color: #444;
         }
 
+        .details-table td {
+            vertical-align: top;
+        }
+
         .details-table td:first-child {
             color: #888;
-            width: 45%;
+            width: 40%;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            white-space: nowrap;
+            padding-right: 1.5rem;
         }
 
         /* ── Contact ── */
@@ -302,7 +308,7 @@
 
     <!-- Hero -->
     <div class="hero" onclick="openLightbox(0)">
-        <img class="hero-img" src="images/01.jpeg" alt="Hogenhovestraat 28">
+        <img class="hero-img" src="images/04.jpg" alt="Hogenhovestraat 28">
         <div class="hero-overlay">
             <h1>Hogenhovestraat 28, Aarsele (Tielt)</h1>
             <div class="price">Vanafprijs € 320.000</div>
@@ -359,9 +365,9 @@
             <h2>Foto's</h2>
             <div class="slider" id="photoSlider">
                 <div class="slider-track" id="sliderTrack">
-                    <img src="images/02.jpg" alt="Foto 1">
-                    <img src="images/03.jpg" alt="Foto 2">
-                    <img src="images/04.jpg" alt="Foto 3">
+                    <img src="images/01.jpeg" alt="Foto 1">
+                    <img src="images/02.jpg" alt="Foto 2">
+                    <img src="images/03.jpg" alt="Foto 3">
                     <img src="images/05.jpg" alt="Foto 4">
                     <img src="images/06.jpeg" alt="Foto 5">
                     <img src="images/07.jpg" alt="Foto 6">
@@ -423,8 +429,8 @@
 <script>
     // All photos in order (hero first, then slider photos)
     const allPhotos = [
-        'images/01.jpeg',
-        'images/02.jpg','images/03.jpg','images/04.jpg','images/05.jpg',
+        'images/04.jpg',
+        'images/01.jpeg','images/02.jpg','images/03.jpg','images/05.jpg',
         'images/06.jpeg','images/07.jpg','images/08.jpeg','images/09.jfif',
         'images/10.jpg','images/11.jpeg','images/12.jpg','images/13.jpg',
     ];
