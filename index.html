@@ -3,88 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hogenhovestraat 28, Tielt – Te Koop</title>
+    <title>Straatnaam 12 – Te Koop</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: Georgia, 'Times New Roman', serif;
             color: #222;
             background: #fff;
-            max-width: 780px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
         }
 
-        /* ── Header ── */
-        header {
-            margin-bottom: 1.5rem;
+        /* ── Hero ── */
+        .hero {
+            position: relative;
+            height: 90vh;
+            background: #ccc url('images/hero.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: flex-end;
         }
 
-        header h1 {
-            font-size: 1.8rem;
-            font-weight: normal;
-        }
-
-        header .price {
-            font-size: 1.1rem;
-            color: #555;
-            margin-top: 0.3rem;
-        }
-
-        /* ── Hero image ── */
-        .hero img {
+        .hero-overlay {
             width: 100%;
-            height: 420px;
-            object-fit: cover;
-            display: block;
-            background: #ddd;
+            padding: 2.5rem 3rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.65));
+            color: #fff;
         }
 
-        /* ── Specs ── */
+        .hero-overlay h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-overlay .price {
+            font-size: 1.5rem;
+            margin-top: 0.4rem;
+            opacity: 0.9;
+        }
+
+        /* ── Specs bar ── */
         .specs {
             display: flex;
-            gap: 2rem;
+            justify-content: center;
+            gap: 3rem;
+            padding: 1.4rem 2rem;
+            background: #f4f1ec;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
             flex-wrap: wrap;
-            padding: 1rem 0;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-            margin: 1.5rem 0;
-            font-size: 0.9rem;
-            color: #555;
         }
 
         .specs span strong {
             display: block;
-            font-size: 1rem;
-            color: #222;
+            font-size: 1.2rem;
+            letter-spacing: 0;
+            text-transform: none;
         }
 
-        /* ── Sections ── */
+        /* ── Layout ── */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
         section {
-            margin-bottom: 2.5rem;
+            padding: 3.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
         }
 
         h2 {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #444;
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.02em;
         }
 
         p {
             line-height: 1.8;
             color: #444;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
         }
 
         /* ── Photo grid ── */
         .photo-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 0.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 0.6rem;
         }
 
         .photo-grid img {
@@ -99,7 +113,6 @@
         .details-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.95rem;
         }
 
         .details-table tr {
@@ -107,53 +120,64 @@
         }
 
         .details-table td {
-            padding: 0.6rem 0;
+            padding: 0.7rem 0;
             color: #444;
         }
 
         .details-table td:first-child {
             color: #888;
             width: 45%;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         /* ── Contact ── */
-        .contact {
-            border-top: 1px solid #eee;
-            padding-top: 2rem;
-            font-size: 0.95rem;
-            line-height: 2;
-        }
-
-        .contact a { color: #222; }
-
-        /* ── Footer ── */
-        footer {
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-            font-size: 0.8rem;
-            color: #aaa;
+        .contact-block {
+            background: #f4f1ec;
+            padding: 2.5rem;
+            border-radius: 4px;
             text-align: center;
         }
 
-        @media (max-width: 500px) {
-            header h1 { font-size: 1.4rem; }
-            .hero img { height: 240px; }
-            .specs { gap: 1rem; }
+        .contact-block h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-block p {
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-block a {
+            color: #222;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            .hero-overlay h1 { font-size: 1.8rem; }
+            .hero-overlay .price { font-size: 1.1rem; }
+            .specs { gap: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Hogenhovestraat 28, Tielt</h1>
-        <div class="price">Vraagprijs € 000.000 v.o.n.</div>
-    </header>
-
+    <!-- Hero -->
     <div class="hero">
-        <img src="images/hero.jpg" alt="Hogenhovestraat 28">
+        <div class="hero-overlay">
+            <h1>Straatnaam 12, Stad</h1>
+            <div class="price">Vraagprijs € 000.000 v.o.n.</div>
+        </div>
     </div>
 
+    <!-- Specs bar -->
     <div class="specs">
         <span>Woonoppervlak <strong>000 m²</strong></span>
         <span>Perceel <strong>000 m²</strong></span>
@@ -162,56 +186,68 @@
         <span>Bouwjaar <strong>0000</strong></span>
     </div>
 
-    <section>
-        <h2>Over de woning</h2>
-        <p>
-            Placeholder beschrijving. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <p>
-            De woning is gelegen in een rustige straat en beschikt over een ruime tuin.
-        </p>
-    </section>
+    <div class="container">
 
-    <section>
-        <h2>Foto's</h2>
-        <div class="photo-grid">
-            <img src="images/photo1.jpg" alt="Woonkamer">
-            <img src="images/photo2.jpg" alt="Keuken">
-            <img src="images/photo3.jpg" alt="Slaapkamer">
-            <img src="images/photo4.jpg" alt="Badkamer">
-            <img src="images/photo5.jpg" alt="Tuin">
-            <img src="images/photo6.jpg" alt="Exterieur">
-        </div>
-    </section>
+        <!-- Description -->
+        <section>
+            <h2>Over de woning</h2>
+            <p>
+                Placeholder beschrijving. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+            <p>
+                De woning is gelegen in een rustige straat en beschikt over een ruime tuin op het
+                zuiden. Placeholder placeholder placeholder.
+            </p>
+        </section>
 
-    <section>
-        <h2>Kenmerken</h2>
-        <table class="details-table">
-            <tr><td>Type woning</td><td>Vrijstaande woning</td></tr>
-            <tr><td>Bouwjaar</td><td>0000</td></tr>
-            <tr><td>Woonoppervlak</td><td>000 m²</td></tr>
-            <tr><td>Perceeloppervlak</td><td>000 m²</td></tr>
-            <tr><td>Kamers</td><td>0 (waarvan 0 slaapkamers)</td></tr>
-            <tr><td>Badkamers</td><td>0</td></tr>
-            <tr><td>Garage</td><td>Ja / Nee</td></tr>
-            <tr><td>Tuin</td><td>Achtertuin op het zuiden</td></tr>
-            <tr><td>Energielabel</td><td>X</td></tr>
-            <tr><td>Verwarming</td><td>CV-ketel (0000)</td></tr>
-        </table>
-    </section>
+        <!-- Photos -->
+        <section>
+            <h2>Foto's</h2>
+            <div class="photo-grid">
+                <img src="images/photo1.jpg" alt="Woonkamer">
+                <img src="images/photo2.jpg" alt="Keuken">
+                <img src="images/photo3.jpg" alt="Slaapkamer">
+                <img src="images/photo4.jpg" alt="Badkamer">
+                <img src="images/photo5.jpg" alt="Tuin">
+                <img src="images/photo6.jpg" alt="Exterieur">
+            </div>
+        </section>
 
-    <div class="contact">
-        <h2>Contact</h2>
-        <p>
-            <strong>Naam Achternaam</strong><br>
-            <a href="tel:+32400000000">+32 4 00 00 00 00</a><br>
-            <a href="mailto:naam@email.com">naam@email.com</a>
-        </p>
+        <!-- Details -->
+        <section>
+            <h2>Kenmerken</h2>
+            <table class="details-table">
+                <tr><td>Type woning</td><td>Vrijstaande woning</td></tr>
+                <tr><td>Bouwjaar</td><td>0000</td></tr>
+                <tr><td>Woonoppervlak</td><td>000 m²</td></tr>
+                <tr><td>Perceeloppervlak</td><td>000 m²</td></tr>
+                <tr><td>Aantal kamers</td><td>0 (waarvan 0 slaapkamers)</td></tr>
+                <tr><td>Badkamers</td><td>0</td></tr>
+                <tr><td>Garage</td><td>Ja / Nee</td></tr>
+                <tr><td>Tuin</td><td>Achtertuin op het zuiden</td></tr>
+                <tr><td>Energielabel</td><td>X</td></tr>
+                <tr><td>Verwarming</td><td>CV-ketel (0000)</td></tr>
+            </table>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <div class="contact-block">
+                <h2>Interesse?</h2>
+                <p>Neem gerust contact op voor een bezichtiging.</p>
+                <br>
+                <p><strong>Naam Achternaam</strong></p>
+                <p><a href="tel:+31600000000">+31 6 00 00 00 00</a></p>
+                <p><a href="mailto:naam@email.com">naam@email.com</a></p>
+            </div>
+        </section>
+
     </div>
 
     <footer>
-        &copy; 2026 · Hogenhovestraat 28, 8700 Tielt · Particuliere verkoop
+        &copy; 2026 · Straatnaam 12 · Particuliere verkoop
     </footer>
 
 </body>
