@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hogenhovestraat 28, Tielt – Te Koop</title>
+    <title>Hogenhovestraat 28, Aarsele (Tielt) – Te Koop</title>
     <style>
         * {
             margin: 0;
@@ -21,7 +21,7 @@
         .hero {
             position: relative;
             height: 90vh;
-            background: #ccc url('images/hero.jpg') center/cover no-repeat;
+            background: #ccc center/cover no-repeat;
             display: flex;
             align-items: flex-end;
         }
@@ -94,19 +94,61 @@
             margin-bottom: 1rem;
         }
 
-        /* ── Photo grid ── */
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 0.6rem;
+        /* ── Photo slider ── */
+        .slider {
+            position: relative;
+            overflow: hidden;
+            background: #111;
+            aspect-ratio: 16/9;
         }
 
-        .photo-grid img {
+        .slider-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.4s ease;
+        }
+
+        .slider-track img {
+            flex-shrink: 0;
             width: 100%;
-            aspect-ratio: 4/3;
+            height: 100%;
             object-fit: cover;
-            display: block;
-            background: #ddd;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.45);
+            color: #fff;
+            border: none;
+            font-size: 1.6rem;
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            transition: background 0.15s;
+            z-index: 2;
+        }
+
+        .slider-btn:hover { background: rgba(0,0,0,0.7); }
+        .slider-btn.prev { left: 0.75rem; }
+        .slider-btn.next { right: 0.75rem; }
+
+        .slider-counter {
+            position: absolute;
+            bottom: 0.6rem;
+            right: 0.9rem;
+            background: rgba(0,0,0,0.45);
+            color: #fff;
+            font-size: 0.78rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            font-family: system-ui, sans-serif;
         }
 
         /* ── Details table ── */
@@ -170,20 +212,20 @@
 <body>
 
     <!-- Hero -->
-    <div class="hero">
+    <div class="hero" style="background-image: url('images/01.jpeg');">
         <div class="hero-overlay">
-            <h1>Hogenhovestraat 28, Tielt</h1>
-            <div class="price">Vraagprijs € 000.000 v.o.n.</div>
+            <h1>Hogenhovestraat 28, Aarsele (Tielt)</h1>
+            <div class="price">Vanafprijs € 320.000</div>
         </div>
     </div>
 
     <!-- Specs bar -->
     <div class="specs">
-        <span>Woonoppervlak <strong>000 m²</strong></span>
-        <span>Perceel <strong>000 m²</strong></span>
-        <span>Kamers <strong>0</strong></span>
-        <span>Slaapkamers <strong>0</strong></span>
-        <span>Bouwjaar <strong>0000</strong></span>
+        <span>Woonoppervlak <strong>220 m²</strong></span>
+        <span>Perceel <strong>666 m²</strong></span>
+        <span>Slaapkamers <strong>3</strong></span>
+        <span>Bouwjaar <strong>1936</strong></span>
+        <span>EPC <strong>B · 149 kWh/m²jr</strong></span>
     </div>
 
     <div class="container">
@@ -192,26 +234,59 @@
         <section>
             <h2>Over de woning</h2>
             <p>
-                Placeholder beschrijving. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris.
+                Deze instapklare, energiezuinige rijwoning is gelegen in het pittoreske Aarsele.
+                Daar vind je alle nodige voorzieningen: restaurants, bakker, slager, kruidenier,
+                station, lagere school enz. Het huis ligt op een ruim perceel van 666&nbsp;m² en
+                heeft een bewoonbare oppervlakte van maar liefst 220&nbsp;m². De grote tuin biedt
+                een prachtig verzicht op de achterliggende wijngaard.
             </p>
             <p>
-                De woning is gelegen in een rustige straat en beschikt over een ruime tuin op het
-                zuiden. Placeholder placeholder placeholder.
+                Het oorspronkelijke huis dateert uit 1936 en werd laatst grondig energetisch
+                gerenoveerd in 2015–2016. De woning werd volledig geïsoleerd en voldoet aan alle
+                hedendaagse normen (EPC B).
+            </p>
+            <p>
+                Op het gelijkvloers vind je de inkomhal, ruime woonkamer, lichtrijke keuken,
+                praktische berging/technische ruimte en toilet. Grote raampartijen in de
+                gerenoveerde achterbouw zorgen voor verbinding met de tuin. Het volledig
+                gelijkvloers is voorzien van vloerverwarming.
+            </p>
+            <p>
+                Op het eerste verdiep bevinden zich twee slaapkamers (14&nbsp;m²), een open
+                bureauruimte of speelkamer en de badkamer (ligbad, inloopdouche, dubbele lavabo
+                en toilet). De master bedroom en dressing bevinden zich op de tweede verdieping.
+            </p>
+            <p>
+                Daarnaast beschikt de woning ook over een kleine maar droge kelder en is er een
+                rechtstreekse doorgang naar de tuin aan de zijkant van de woning.
+            </p>
+            <p>
+                Nieuwsgierig naar deze woning? Maak een afspraak en kom kijken tijdens de
+                bezoekdag op <strong>zaterdag 11 april</strong>.
             </p>
         </section>
 
         <!-- Photos -->
         <section>
             <h2>Foto's</h2>
-            <div class="photo-grid">
-                <img src="images/photo1.jpg" alt="Woonkamer">
-                <img src="images/photo2.jpg" alt="Keuken">
-                <img src="images/photo3.jpg" alt="Slaapkamer">
-                <img src="images/photo4.jpg" alt="Badkamer">
-                <img src="images/photo5.jpg" alt="Tuin">
-                <img src="images/photo6.jpg" alt="Exterieur">
+            <div class="slider" id="photoSlider">
+                <div class="slider-track" id="sliderTrack">
+                    <img src="images/02.jpg" alt="Foto 1">
+                    <img src="images/03.jpg" alt="Foto 2">
+                    <img src="images/04.jpg" alt="Foto 3">
+                    <img src="images/05.jpg" alt="Foto 4">
+                    <img src="images/06.jpeg" alt="Foto 5">
+                    <img src="images/07.jpg" alt="Foto 6">
+                    <img src="images/08.jpeg" alt="Foto 7">
+                    <img src="images/09.jfif" alt="Foto 8">
+                    <img src="images/10.jpg" alt="Foto 9">
+                    <img src="images/11.jpeg" alt="Foto 10">
+                    <img src="images/12.jpg" alt="Foto 11">
+                    <img src="images/13.jpg" alt="Foto 12">
+                </div>
+                <button class="slider-btn prev" onclick="slideBy(-1)">&#8249;</button>
+                <button class="slider-btn next" onclick="slideBy(1)">&#8250;</button>
+                <div class="slider-counter" id="sliderCounter">1 / 12</div>
             </div>
         </section>
 
@@ -219,16 +294,14 @@
         <section>
             <h2>Kenmerken</h2>
             <table class="details-table">
-                <tr><td>Type woning</td><td>Vrijstaande woning</td></tr>
-                <tr><td>Bouwjaar</td><td>0000</td></tr>
-                <tr><td>Woonoppervlak</td><td>000 m²</td></tr>
-                <tr><td>Perceeloppervlak</td><td>000 m²</td></tr>
-                <tr><td>Aantal kamers</td><td>0 (waarvan 0 slaapkamers)</td></tr>
-                <tr><td>Badkamers</td><td>0</td></tr>
-                <tr><td>Garage</td><td>Ja / Nee</td></tr>
-                <tr><td>Tuin</td><td>Achtertuin op het zuiden</td></tr>
-                <tr><td>Energielabel</td><td>X</td></tr>
-                <tr><td>Verwarming</td><td>CV-ketel (0000)</td></tr>
+                <tr><td>Type woning</td><td>Rijhuis</td></tr>
+                <tr><td>Bouwjaar</td><td>1936</td></tr>
+                <tr><td>Woonoppervlak</td><td>220 m²</td></tr>
+                <tr><td>Perceeloppervlak</td><td>666 m²</td></tr>
+                <tr><td>Aantal slaapkamers</td><td>3 (mogelijkheid tot 4)</td></tr>
+                <tr><td>Autostaanplaatsen</td><td>2</td></tr>
+                <tr><td>Energielabel</td><td>EPC B · 149 kWh / (m² jaar)</td></tr>
+                <tr><td>Regenwaterput</td><td>5000 l</td></tr>
             </table>
         </section>
 
@@ -236,19 +309,44 @@
         <section>
             <div class="contact-block">
                 <h2>Interesse?</h2>
-                <p>Neem gerust contact op voor een bezichtiging.</p>
+                <p>Neem gerust contact op voor een bezichtiging of meer info.</p>
                 <br>
-                <p><strong>Naam Achternaam</strong></p>
-                <p><a href="tel:+31600000000">+31 6 00 00 00 00</a></p>
-                <p><a href="mailto:naam@email.com">naam@email.com</a></p>
+                <p><a href="tel:+32496053911">0496/05 39 11</a></p>
+                <p><a href="mailto:hogenhovestraat28@gmail.com">hogenhovestraat28@gmail.com</a></p>
             </div>
         </section>
 
     </div>
 
     <footer>
-        &copy; 2026 · Hogenhovestraat 28, 8700 Tielt · Particuliere verkoop
+        &copy; 2026 · Hogenhovestraat 28, 8700 Aarsele (Tielt) · Particuliere verkoop
     </footer>
 
+
+<script>
+    let current = 0;
+    const total = 12;
+    const track = document.getElementById('sliderTrack');
+    const counter = document.getElementById('sliderCounter');
+
+    function slideBy(dir) {
+        current = (current + dir + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        counter.textContent = `${current + 1} / ${total}`;
+    }
+
+    document.getElementById('photoSlider').addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') slideBy(-1);
+        if (e.key === 'ArrowRight') slideBy(1);
+    });
+
+    // Swipe support
+    let touchStartX = 0;
+    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+    track.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) slideBy(dx < 0 ? 1 : -1);
+    });
+</script>
 </body>
 </html>
