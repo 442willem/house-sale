@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Straatnaam 12 – Te Koop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #222;
+            background: #fff;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            position: relative;
+            height: 90vh;
+            background: #ccc url('images/hero.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .hero-overlay {
+            width: 100%;
+            padding: 2.5rem 3rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.65));
+            color: #fff;
+        }
+
+        .hero-overlay h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-overlay .price {
+            font-size: 1.5rem;
+            margin-top: 0.4rem;
+            opacity: 0.9;
+        }
+
+        /* ── Specs bar ── */
+        .specs {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 1.4rem 2rem;
+            background: #f4f1ec;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            flex-wrap: wrap;
+        }
+
+        .specs span strong {
+            display: block;
+            font-size: 1.2rem;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        /* ── Layout ── */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 3.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.02em;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        /* ── Photo grid ── */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 0.6rem;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+            background: #ddd;
+        }
+
+        /* ── Details table ── */
+        .details-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .details-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .details-table td {
+            padding: 0.7rem 0;
+            color: #444;
+        }
+
+        .details-table td:first-child {
+            color: #888;
+            width: 45%;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ── Contact ── */
+        .contact-block {
+            background: #f4f1ec;
+            padding: 2.5rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .contact-block h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-block p {
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-block a {
+            color: #222;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            .hero-overlay h1 { font-size: 1.8rem; }
+            .hero-overlay .price { font-size: 1.1rem; }
+            .specs { gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-overlay">
+            <h1>Straatnaam 12, Stad</h1>
+            <div class="price">Vraagprijs € 000.000 v.o.n.</div>
+        </div>
+    </div>
+
+    <!-- Specs bar -->
+    <div class="specs">
+        <span>Woonoppervlak <strong>000 m²</strong></span>
+        <span>Perceel <strong>000 m²</strong></span>
+        <span>Kamers <strong>0</strong></span>
+        <span>Slaapkamers <strong>0</strong></span>
+        <span>Bouwjaar <strong>0000</strong></span>
+    </div>
+
+    <div class="container">
+
+        <!-- Description -->
+        <section>
+            <h2>Over de woning</h2>
+            <p>
+                Placeholder beschrijving. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+            <p>
+                De woning is gelegen in een rustige straat en beschikt over een ruime tuin op het
+                zuiden. Placeholder placeholder placeholder.
+            </p>
+        </section>
+
+        <!-- Photos -->
+        <section>
+            <h2>Foto's</h2>
+            <div class="photo-grid">
+                <img src="images/photo1.jpg" alt="Woonkamer">
+                <img src="images/photo2.jpg" alt="Keuken">
+                <img src="images/photo3.jpg" alt="Slaapkamer">
+                <img src="images/photo4.jpg" alt="Badkamer">
+                <img src="images/photo5.jpg" alt="Tuin">
+                <img src="images/photo6.jpg" alt="Exterieur">
+            </div>
+        </section>
+
+        <!-- Details -->
+        <section>
+            <h2>Kenmerken</h2>
+            <table class="details-table">
+                <tr><td>Type woning</td><td>Vrijstaande woning</td></tr>
+                <tr><td>Bouwjaar</td><td>0000</td></tr>
+                <tr><td>Woonoppervlak</td><td>000 m²</td></tr>
+                <tr><td>Perceeloppervlak</td><td>000 m²</td></tr>
+                <tr><td>Aantal kamers</td><td>0 (waarvan 0 slaapkamers)</td></tr>
+                <tr><td>Badkamers</td><td>0</td></tr>
+                <tr><td>Garage</td><td>Ja / Nee</td></tr>
+                <tr><td>Tuin</td><td>Achtertuin op het zuiden</td></tr>
+                <tr><td>Energielabel</td><td>X</td></tr>
+                <tr><td>Verwarming</td><td>CV-ketel (0000)</td></tr>
+            </table>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <div class="contact-block">
+                <h2>Interesse?</h2>
+                <p>Neem gerust contact op voor een bezichtiging.</p>
+                <br>
+                <p><strong>Naam Achternaam</strong></p>
+                <p><a href="tel:+31600000000">+31 6 00 00 00 00</a></p>
+                <p><a href="mailto:naam@email.com">naam@email.com</a></p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 · Straatnaam 12 · Particuliere verkoop
+    </footer>
+
+</body>
+</html>
