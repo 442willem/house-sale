@@ -367,7 +367,8 @@
                     <img src="images/01.jpeg" alt="Foto 1">
                     <img src="images/02.jpg" alt="Foto 2">
                     <img src="images/03.jpg" alt="Foto 3">
-                    <img src="images/05.jpg" alt="Foto 4">
+                    <img src="images/04.jpg" alt="Foto 4">
+                    <img src="images/05.jpg" alt="Foto 5">
                     <img src="images/06.jpeg" alt="Foto 5">
                     <img src="images/07.jpg" alt="Foto 6">
                     <img src="images/08.jpeg" alt="Foto 7">
@@ -379,7 +380,7 @@
                 </div>
                 <button class="slider-btn prev" onclick="slideBy(-1)">&#8249;</button>
                 <button class="slider-btn next" onclick="slideBy(1)">&#8250;</button>
-                <div class="slider-counter" id="sliderCounter">1 / 12</div>
+                <div class="slider-counter" id="sliderCounter">1 / 13</div>
             </div>
         </section>
 
@@ -429,14 +430,14 @@
     // All photos in order (hero first, then slider photos)
     const allPhotos = [
         'images/04.jpg',
-        'images/01.jpeg','images/02.jpg','images/03.jpg','images/05.jpg',
+        'images/01.jpeg','images/02.jpg','images/03.jpg','images/04.jpg','images/05.jpg',
         'images/06.jpeg','images/07.jpg','images/08.jpeg','images/09.jfif',
         'images/10.jpg','images/11.jpeg','images/12.jpg','images/13.jpg',
     ];
 
     // ── Inline slider ──
     let current = 0;
-    const sliderTotal = 12; // photos 02–13
+    const sliderTotal = 13; // photos 01–13 except hero
     const track = document.getElementById('sliderTrack');
     const counter = document.getElementById('sliderCounter');
 
