@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +37,7 @@
             left: 0;
             right: 0;
             padding: 2.5rem 3rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.65));
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
             color: #fff;
         }
 
@@ -126,7 +127,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0,0,0,0.45);
+            background: rgba(0, 0, 0, 0.45);
             color: #fff;
             border: none;
             font-size: 1.6rem;
@@ -142,15 +143,23 @@
             z-index: 2;
         }
 
-        .slider-btn:hover { background: rgba(0,0,0,0.7); }
-        .slider-btn.prev { left: 0.75rem; }
-        .slider-btn.next { right: 0.75rem; }
+        .slider-btn:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .slider-btn.prev {
+            left: 0.75rem;
+        }
+
+        .slider-btn.next {
+            right: 0.75rem;
+        }
 
         .slider-counter {
             position: absolute;
             bottom: 0.6rem;
             right: 0.9rem;
-            background: rgba(0,0,0,0.45);
+            background: rgba(0, 0, 0, 0.45);
             color: #fff;
             font-size: 0.78rem;
             padding: 0.2rem 0.55rem;
@@ -220,7 +229,7 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.92);
+            background: rgba(0, 0, 0, 0.92);
             z-index: 1000;
             align-items: center;
             justify-content: center;
@@ -242,7 +251,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255,255,255,0.12);
+            background: rgba(255, 255, 255, 0.12);
             color: #fff;
             border: none;
             font-size: 2.2rem;
@@ -256,15 +265,23 @@
             transition: background 0.15s;
         }
 
-        .lightbox-btn:hover { background: rgba(255,255,255,0.25); }
-        .lightbox-btn.prev { left: 1rem; }
-        .lightbox-btn.next { right: 1rem; }
+        .lightbox-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .lightbox-btn.prev {
+            left: 1rem;
+        }
+
+        .lightbox-btn.next {
+            right: 1rem;
+        }
 
         .lightbox-close {
             position: absolute;
             top: 1rem;
             right: 1rem;
-            background: rgba(255,255,255,0.12);
+            background: rgba(255, 255, 255, 0.12);
             color: #fff;
             border: none;
             font-size: 1.4rem;
@@ -278,32 +295,51 @@
             transition: background 0.15s;
         }
 
-        .lightbox-close:hover { background: rgba(255,255,255,0.25); }
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
 
         .lightbox-counter {
             position: absolute;
             bottom: 1rem;
             left: 50%;
             transform: translateX(-50%);
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 0.85rem;
             font-family: system-ui, sans-serif;
         }
 
-        .hero, .slider-track img {
+        .hero,
+        .slider-track img {
             cursor: zoom-in;
         }
 
         @media (max-width: 600px) {
-            .hero-overlay h1 { font-size: 1.8rem; }
-            .hero-overlay .price { font-size: 1.1rem; }
-            .specs { gap: 1.5rem; }
-            .lightbox-btn.prev { left: 0.3rem; }
-            .lightbox-btn.next { right: 0.3rem; }
+            .hero-overlay h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-overlay .price {
+                font-size: 1.1rem;
+            }
+
+            .specs {
+                gap: 1.5rem;
+            }
+
+            .lightbox-btn.prev {
+                left: 0.3rem;
+            }
+
+            .lightbox-btn.next {
+                right: 0.3rem;
+            }
         }
     </style>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="b09cb224-32ce-46e8-b07c-888d3e6b154b"></script>
+    <script defer src="https://cloud.umami.is/script.js"
+        data-website-id="b09cb224-32ce-46e8-b07c-888d3e6b154b"></script>
 </head>
+
 <body>
 
     <!-- Hero -->
@@ -389,14 +425,38 @@
         <section>
             <h2>Kenmerken</h2>
             <table class="details-table">
-                <tr><td>Type woning</td><td>Rijhuis</td></tr>
-                <tr><td>Bouwjaar</td><td>1936</td></tr>
-                <tr><td>Woonoppervlak</td><td>220 m²</td></tr>
-                <tr><td>Grondoppervlak</td><td>666 m²</td></tr>
-                <tr><td>Aantal slaapkamers</td><td>3 (mogelijkheid tot 4)</td></tr>
-                <tr><td>Autostaanplaatsen</td><td>2</td></tr>
-                <tr><td>Energielabel</td><td>EPC B · 149 kWh/(m²jaar)</td></tr>
-                <tr><td>Regenwaterput</td><td>5000 l</td></tr>
+                <tr>
+                    <td>Type woning</td>
+                    <td>Rijhuis</td>
+                </tr>
+                <tr>
+                    <td>Bouwjaar</td>
+                    <td>1936</td>
+                </tr>
+                <tr>
+                    <td>Woonoppervlak</td>
+                    <td>220 m²</td>
+                </tr>
+                <tr>
+                    <td>Grondoppervlak</td>
+                    <td>666 m²</td>
+                </tr>
+                <tr>
+                    <td>Aantal slaapkamers</td>
+                    <td>3 (mogelijkheid tot 4)</td>
+                </tr>
+                <tr>
+                    <td>Autostaanplaatsen</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Energielabel</td>
+                    <td>EPC B · 149 kWh/(m²jaar)</td>
+                </tr>
+                <tr>
+                    <td>Regenwaterput</td>
+                    <td>5000 l</td>
+                </tr>
             </table>
         </section>
 
@@ -406,7 +466,6 @@
                 <h2>Interesse?</h2>
                 <p>Neem gerust contact op voor een bezichtiging of meer info.</p>
                 <br>
-                <p><a href="tel:+32496053911">0496/05 39 11</a></p>
                 <p><a href="mailto:hogenhovestraat28@gmail.com">hogenhovestraat28@gmail.com</a></p>
             </div>
         </section>
@@ -427,81 +486,82 @@
     </div>
 
 
-<script>
-    // All photos in order (hero first, then slider photos)
-    const allPhotos = [
-        'images/04.jpg',
-        'images/01.jpeg','images/02.jpg','images/03.jpg','images/04.jpg','images/05.jpg',
-        'images/06.jpeg','images/07.jpg','images/08.jpeg','images/09.jfif',
-        'images/10.jpg','images/11.jpeg','images/12.jpg','images/13.jpg',
-    ];
+    <script>
+        // All photos in order (hero first, then slider photos)
+        const allPhotos = [
+            'images/04.jpg',
+            'images/01.jpeg', 'images/02.jpg', 'images/03.jpg', 'images/04.jpg', 'images/05.jpg',
+            'images/06.jpeg', 'images/07.jpg', 'images/08.jpeg', 'images/09.jfif',
+            'images/10.jpg', 'images/11.jpeg', 'images/12.jpg', 'images/13.jpg',
+        ];
 
-    // ── Inline slider ──
-    let current = 0;
-    const sliderTotal = 13; // photos 01–13 except hero
-    const track = document.getElementById('sliderTrack');
-    const counter = document.getElementById('sliderCounter');
+        // ── Inline slider ──
+        let current = 0;
+        const sliderTotal = 13; // photos 01–13 except hero
+        const track = document.getElementById('sliderTrack');
+        const counter = document.getElementById('sliderCounter');
 
-    function slideBy(dir) {
-        current = (current + dir + sliderTotal) % sliderTotal;
-        track.style.transform = `translateX(-${current * 100}%)`;
-        counter.textContent = `${current + 1} / ${sliderTotal}`;
-    }
+        function slideBy(dir) {
+            current = (current + dir + sliderTotal) % sliderTotal;
+            track.style.transform = `translateX(-${current * 100}%)`;
+            counter.textContent = `${current + 1} / ${sliderTotal}`;
+        }
 
-    // Clicking a slider image opens lightbox at that photo (offset by 1 because hero is index 0)
-    track.querySelectorAll('img').forEach((img, i) => {
-        img.addEventListener('click', () => openLightbox(i + 1));
-    });
+        // Clicking a slider image opens lightbox at that photo (offset by 1 because hero is index 0)
+        track.querySelectorAll('img').forEach((img, i) => {
+            img.addEventListener('click', () => openLightbox(i + 1));
+        });
 
-    let touchStartX = 0;
-    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
-    track.addEventListener('touchend', e => {
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        if (Math.abs(dx) > 40) slideBy(dx < 0 ? 1 : -1);
-    });
+        let touchStartX = 0;
+        track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+        track.addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(dx) > 40) slideBy(dx < 0 ? 1 : -1);
+        });
 
-    // ── Lightbox ──
-    let lbIndex = 0;
-    const lightbox = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightboxImg');
-    const lbCounter = document.getElementById('lbCounter');
+        // ── Lightbox ──
+        let lbIndex = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightboxImg');
+        const lbCounter = document.getElementById('lbCounter');
 
-    function openLightbox(index) {
-        lbIndex = index;
-        lbImg.src = allPhotos[lbIndex];
-        lbCounter.textContent = `${lbIndex + 1} / ${allPhotos.length}`;
-        lightbox.classList.add('open');
-        document.body.style.overflow = 'hidden';
-    }
+        function openLightbox(index) {
+            lbIndex = index;
+            lbImg.src = allPhotos[lbIndex];
+            lbCounter.textContent = `${lbIndex + 1} / ${allPhotos.length}`;
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
 
-    function closeLightbox() {
-        lightbox.classList.remove('open');
-        document.body.style.overflow = '';
-    }
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = '';
+        }
 
-    function lbMove(dir) {
-        lbIndex = (lbIndex + dir + allPhotos.length) % allPhotos.length;
-        lbImg.src = allPhotos[lbIndex];
-        lbCounter.textContent = `${lbIndex + 1} / ${allPhotos.length}`;
-    }
+        function lbMove(dir) {
+            lbIndex = (lbIndex + dir + allPhotos.length) % allPhotos.length;
+            lbImg.src = allPhotos[lbIndex];
+            lbCounter.textContent = `${lbIndex + 1} / ${allPhotos.length}`;
+        }
 
-    function handleLightboxClick(e) {
-        if (e.target === lightbox || e.target === lbImg) closeLightbox();
-    }
+        function handleLightboxClick(e) {
+            if (e.target === lightbox || e.target === lbImg) closeLightbox();
+        }
 
-    document.addEventListener('keydown', e => {
-        if (!lightbox.classList.contains('open')) return;
-        if (e.key === 'ArrowLeft')  lbMove(-1);
-        if (e.key === 'ArrowRight') lbMove(1);
-        if (e.key === 'Escape')     closeLightbox();
-    });
+        document.addEventListener('keydown', e => {
+            if (!lightbox.classList.contains('open')) return;
+            if (e.key === 'ArrowLeft') lbMove(-1);
+            if (e.key === 'ArrowRight') lbMove(1);
+            if (e.key === 'Escape') closeLightbox();
+        });
 
-    let lbTouchX = 0;
-    lbImg.addEventListener('touchstart', e => { lbTouchX = e.touches[0].clientX; });
-    lbImg.addEventListener('touchend', e => {
-        const dx = e.changedTouches[0].clientX - lbTouchX;
-        if (Math.abs(dx) > 40) lbMove(dx < 0 ? 1 : -1);
-    });
-</script>
+        let lbTouchX = 0;
+        lbImg.addEventListener('touchstart', e => { lbTouchX = e.touches[0].clientX; });
+        lbImg.addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].clientX - lbTouchX;
+            if (Math.abs(dx) > 40) lbMove(dx < 0 ? 1 : -1);
+        });
+    </script>
 </body>
+
 </html>
